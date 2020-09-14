@@ -1,16 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     {% if title %}
-    <title> {{title}} </title>
+    <title> {{ title }}</title>
     {% else %}
-    <title>Welcome to news article</title>
+    <title> News Highlight Website</title>
     {% endif %}
 </head>
 
 <body>
+
+    <!-- Business News -->
+    <h3> Business News </h3>
+    <ul>
+        {% for business in business_sources %}
+        <li>{{ business.name}}</li>
+        <li>{{ business.description}}</li>
+
+        {% endfor %}
+    </ul>
+
+    <h3> Entertainment News </h3>
+    <ul>
+        {% for entertainment in entertainment_sources %}
+        <li>{{ entertainment.name}}</li>
+        <li>{{ entertainment.description }}</li>
+
+        {% endfor %}
+    </ul>
+
+    <h3> Technology News </h3>
+    <ul>
+        {% for technology in technology_sources %}
+        <li>{{ technology.name}}</li>
+        <li>{{ technology.description}}</li>
+
+        {% endfor %}
+    </ul>
+
+    <h3>Sports News</h3>
+    <ul>
+        {% for sports in sports_sources %}
+        <li>{{ sports.name}}</li>
+        <li>{{ sports.description}}</li>
+
+        {% endfor %}
+    </ul>
+
 
 </body>
 
