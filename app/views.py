@@ -20,10 +20,3 @@ def index():
 
 
 
-# @app.route('/sources/<int:sources_id>')
-# def articles(sources_id):
-
-#     '''
-#     View movie page function that returns the movie details page and its data
-#     '''
-#     return render_template('articles.html',id = sources_id)
