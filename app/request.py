@@ -2,9 +2,6 @@ import urllib.request
 import json
 from .models import Sources, Articles
 
-# Sources = news.Sources
-# Articles = news.Articles
-
 
 # Getting api key
 api_key = None
