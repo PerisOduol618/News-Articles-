@@ -1,4 +1,64 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+
+
+
+{% block content %}
+<!-- Business News  -->
+<h3 class="text text-center">Business News Sources</h3>
+    {{ macro.displaySourceList(business_sources)}}
+
+<!-- Entertainment News  -->
+<h3 class="text text-center">Entertainment News Sources</h3>
+    {{ macro.displaySourceList(entertainment_sources)}}
+
+
+ <!-- Health News  -->
+<h3 class="text text-center">Health News Sources</h3>
+{{ macro.displaySourceList(health_sources)}}
+
+
+<!-- Technology News  -->
+<h3 class="text text-center">Technology News Sources</h3>
+    {{ macro.displaySourceList(technology_sources)}}
+
+<!-- Sport News  -->
+    <h3 class="text text-center">Sports News Sources</h3>
+    {{ macro.displaySourceList(sports_sources)}}
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html>
 
 <head>
@@ -12,17 +72,17 @@
 
 <body>
 
-    <!-- Business News -->
     <h3> Business News </h3>
     <ul>
         {% for business in business_sources %}
-        <li>{{ business.name}}</li>
+        <li><h4>{{ business.name}}</h4></li>
         <li>{{ business.description}}</li>
+        <button><a href="">View Article</a></button>
 
         {% endfor %}
-    </ul>
+    </ul> -->
 
-    <h3> Entertainment News </h3>
+<!-- <h3> Entertainment News </h3>
     <ul>
         {% for entertainment in entertainment_sources %}
         <li>{{ entertainment.name}}</li>
@@ -47,7 +107,7 @@
         <li>{{ sports.description}}</li>
 
         {% endfor %}
-    </ul>
+    </ul> -->
 
 
 </body>
